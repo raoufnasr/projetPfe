@@ -1,0 +1,20 @@
+<div class=" favoris">
+    <section class="registerContent container   ">
+        <h1 class="title">Mes Favoris</h1>
+        <div class="card-group">
+            <div class="card" *ngFor="let favoris of listFavoris">
+                <img class="card-img-top" src="{{config.apiUrl}}{{favoris.products?.image[0]}}" alt=" Card image cap ">
+                <div class=" card-body " (click)=" checkFavoris(favoris.products) ">
+                    <h5 class=" card-title ">{{favoris.products?.nom}}</h5>
+                    <p class=" card-text ">{{favoris.products?.description}}</p>
+                    <small class=" text-muted "> {{favoris.updatedAt}}</small>
+                </div>
+            </div>
+            <div *ngIf="!this.listFavoris">
+
+                <p class="empty-message"> Aucune favoris ajoutée</p>
+
+            </div>
+        </div>
+    </section>
+</div>

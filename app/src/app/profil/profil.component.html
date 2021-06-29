@@ -1,0 +1,54 @@
+<div class="profil">
+    <div class="registerContent container ">
+        <h1>Mon Profil</h1>
+        <div class="blcImage"> <img class="card-img-top" [src]="currentClient.avatar?config.apiUrl+currentClient.avatar:imgPreview" alt="Card image cap">
+            <div class="blcUpload">
+                <img class="camera" src="../../../../assets/img/camera.png" alt="cammera">
+                <input class="file" type="file" (change)="handleFileInput($event.target.files)">
+            </div>
+        </div>
+        <div class="blcEdit">
+            <img class="edit" src="../../../../assets/img/edit.svg" alt="cammera">
+
+        </div>
+        <form class="form" [formGroup]="registerForm">
+            <div class="form-row">
+                <div class="inp">
+                    <input type="text" class="form-control inputblc " id="validerver01" placeholder="Nom" formControlName="nom">
+                </div>
+                <div class="inp">
+                    <input type="text" class="form-control  inputblc" id="validativer02" placeholder="prénom" formControlName="prenom">
+                </div>
+                <div class="inp">
+                    <div>
+                        <input type="text" class="form-control inputblc " id="validerverEmail" placeholder="Email" aria-describedby="inputGroupPrepend3" formControlName="email">
+                    </div>
+                </div>
+                <div class="inp">
+                    <input type="text" class="form-control inputblc " id="validati03" placeholder="Username" formControlName="username">
+                </div>
+                <div class="inp">
+                    <input type="password" class="form-control inputblc " id="validaServer04" placeholder="password" formControlName="password">
+                </div>
+                <div class="inp">
+                    <input type="text" class="form-control inputblc  " id="validation07" placeholder="Téléphone" formControlName="phone">
+                </div>
+                <div class="inp">
+                    <input type="text" class="form-control inputblc  " id="valir05" placeholder="adresse" formControlName="adresse">
+                </div>
+                <div class="inp">
+                    <input type="text" class="form-control inputblc  " id="valider06" placeholder="code postal" formControlName="cp">
+                </div>
+                <div class="inp">
+                    <input type="text" class="form-control inputblc  " id="varver06" placeholder="ville" formControlName="ville">
+                </div>
+                <div class="inp">
+                    <input type="text" class="form-control inputblc  " id="valir07" placeholder="pays" formControlName="pays">
+                </div>
+
+
+            </div>
+            <button class="btn " (click)="updateProfile()" type="submit">Modifier</button>
+        </form>
+    </div>
+</div>

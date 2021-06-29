@@ -1,0 +1,13 @@
+<div>
+    <div class="top-category " *ngFor="let categorie of listCategory">
+        <div class="cover-img">
+            <div class="image">
+                <img default="../../assets/img/miel.jpg" src="{{config.apiUrl}}{{categorie.image}}" />
+            </div>
+        </div>
+        <div class="description">
+            <h1 class="title"> {{categorie.nom}} </h1>
+            <p class="text">{{categorie.description}}</p>
+        </div>
+    </div>
+</div>
